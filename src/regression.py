@@ -7,7 +7,7 @@ Describe algorithms within fields of regression, includes:
 
 import numpy as np
 
-def comput_mse(y_true, y_pred) -> float:
+def compute_mse(y_true, y_pred) -> float:
     """
     Compute MSE (to minimise the loss function)
     Args:
