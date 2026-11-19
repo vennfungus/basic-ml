@@ -32,13 +32,14 @@ def gradient_descent(X, y, lr: float, epochs: int, save_history: bool = False):
     for epoch in range(epochs):
         y_pred = X @ w
         error = y_pred - y
-    
-        gradient = (2 / N) * (X.T @ error)
-        w = w - lr * gradient
         
         if save_history:
             mse = np.mean(error ** 2)
             loss_history.append(mse)
+
+        gradient = (2 / N) * (X.T @ error)
+        w = w - lr * gradient
+        
         
         if epoch % max(1, epochs // 5) == 0:
             current_mse = np.mean(error ** 2)
@@ -52,3 +53,14 @@ def gradient_descent(X, y, lr: float, epochs: int, save_history: bool = False):
     else:
         return w
 
+def scale_zerone(X):
+    # min-max compute
+    X_min = np.min(X, axis=0)
+    X_max = np.max(X, axis=0)
+    
+    # Avoiding divide to zero
+    range_X = X_max - X_min
+    range_X[range_X == 0] = 1 
+    
+    X_scaled = (X - X_min) / range_X
+    return X_scaled, X_min, range_X
