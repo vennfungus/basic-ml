@@ -25,7 +25,7 @@ def _train_bilogistic(X, y, lr = 0.01, epochs = 1000):
         b -= lr * db
     return w, b
 
-def log_sample(n: int, random_state: int = None):
+def log_sample(n: int, random_state: int = None, ranging: int = 1):
     """
     Create sample of n-number of dots
     True label: 
@@ -35,8 +35,8 @@ def log_sample(n: int, random_state: int = None):
         np.random.seed(random_state)
 
     eps = 1e-7
-    x = np.random.uniform(eps, 1.0, size=n)
-    y = np.random.uniform(0.0, 1.0, size=n)
+    x = np.random.uniform(eps, ranging, size=n)
+    y = np.random.uniform(0.0, ranging, size=n)
 
     X = np.column_stack((x, y))
     boundary = -np.log(x)
