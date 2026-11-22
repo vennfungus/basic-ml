@@ -86,22 +86,3 @@ def scale_zerone(X):
     # Scale features to [0, 1]
     X_scaled = (X - X_min) / range_X
     return X_scaled, X_min, range_X
-
-def log_sample(n: int, random_state: int = None):
-    """
-    Create sample of n-number of dots
-    True label: 
-    """
-
-    if random_state is not None:
-        np.random.seed(random_state)
-
-    eps = 1e-7
-    x = np.random.uniform(eps, 1.0, size=n)
-    y = np.random.uniform(0.0, 1.0, size=n)
-
-    X = np.column_stack((x, y))
-    boundary = -np.log(x)
-    y_labels = (y > boundary).astype(int)
-
-    return X, y_labels
