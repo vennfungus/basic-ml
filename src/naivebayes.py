@@ -39,7 +39,7 @@ class NaiveBayes:
         Returns:
             float: log-likelihood (sum over features)
         """
-        # Initialize likelihood accumulator
+        # Initialise likelihood accumulator
         likelihood = 0.0 # float
 
         # Loop over each feature of the row
@@ -69,12 +69,12 @@ class NaiveBayes:
         Returns:
             ndarray: predicted class labels, shape (N,)
         """
-        # Initialize list of predictions
+        # Initialise list of predictions
         y_pred = []
 
         # Loop over each sample
         for _, row in X.iterrows():
-            # Initialize list of posterior scores
+            # Initialise list of posterior scores
             poster = []
             # Loop over each class
             for i in range(len(self.classes)):

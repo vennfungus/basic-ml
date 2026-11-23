@@ -63,7 +63,7 @@ def gradient_descent(X, y, lr: float, epochs: int, save_history: bool = False):
 
 def scale_zerone(X):
     """
-    Scale features to [0, 1] by min-max normalization
+    Scale features to [0, 1] by min-max normalisation
     Args:
         X: matrix of features (N, D)
     

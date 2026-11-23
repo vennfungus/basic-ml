@@ -43,7 +43,7 @@ def _train_bilogistic(X, y, lr = 0.01, epochs = 1000):
     """
     # Get number of samples (N) and features (D)
     n, d = X.shape
-    # Initialize weights to zeros, shape (D,)
+    # Initialise weights to zeros, shape (D,)
     w = np.zeros(d)
     # Initial start bias
     b = 0.0
