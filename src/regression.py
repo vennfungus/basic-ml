@@ -1,10 +1,5 @@
 # src.regression
 
-"""
-Describe algorithms within fields of regression, includes:
-
-"""
-
 import numpy as np
 
 def compute_mse(y_true, y_pred) -> float:
