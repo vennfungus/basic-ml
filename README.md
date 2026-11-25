@@ -5,6 +5,16 @@ Thought it could serve the needs of the community in their own pursuit of learni
 
 ## Folder Construct
 ```text
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── regression.ipynb
+├── classification.ipynb
+└── src
+    ├── regression.py
+    ├── logistic.py
+    ├── naivebayes.py
+    └── metric.py
 ```
 
 The construction is divided into two part. The `.ipynb` file, which perform algorithm with data, would be used as a visual vehicle. While the source code of `.py` is mainly used to describe the algorithm.
@@ -13,4 +23,6 @@ Beside, the algorithm will also be briefly described in terms of concept and inp
 
 ## Cloning (thought no need)
 ```bash
+git clone https://github.com/vennfungus/basic-ml.git
+cd basic-ml
 ```
