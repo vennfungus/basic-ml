@@ -6,6 +6,7 @@ Thought it could serve the needs of the community in their own pursuit of learni
 ## Folder Construct
 ```text
 ├── README.md
+├── CONTRIBUTING.md
 ├── requirements.txt
 ├── .gitignore
 ├── regression.ipynb
